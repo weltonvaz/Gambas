@@ -1,0 +1,16 @@
+[Breakpoints]
+Count=0
+
+[DebugWindow]
+Count=0
+
+[OpenFile]
+Count=0
+File[1]=".src/FMain.form"
+Active=2
+File[2]=".src/FMain.class:52.27"
+File[3]=".src/Mglobal.module:2.12"
+
+[Watches]
+Count=0
+

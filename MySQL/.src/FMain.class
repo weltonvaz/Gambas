@@ -1,0 +1,64 @@
+' Gambas class file
+
+arrtable[3] As String
+
+Public Sub show_data()
+  'create the header's view
+  
+  
+  With tableview1
+    .rows.count = 0
+    .columns.count = 3
+    .columns[0].text = "COD."
+    .columns[1].text = "NOME"
+    .columns[1].Width = 300
+    .Columns[2].Text = "TELEFONE"
+        
+  End With
+  Mglobal.fill_view(tableview1, "select * from cadastro")
+End
+
+Public Sub Button1_Click()
+Dim dbname As String
+
+      dbname = "agenda"
+
+      With Mglobal
+
+        If .conn(TextBox1.text, TextBox2.text, TextBox3.text) = True Then
+            .db.Close
+            .db.Name = dbname
+            .db.Open
+          
+        End If
+      End With
+      
+TextBox1.Text = "172.17.0.2"
+TextBox1.Visible = True
+TextBox2.Text = "monty"
+TextBox2.Visible = True
+TextBox3.Text = "some_pass"
+TextBox3.Visible = True
+    
+show_data()
+
+Catch
+  Message.Error(Error.Text)
+
+End
+
+Public Sub TableView1_Data(Row As Integer, Column As Integer)
+
+  'the array's field name's
+  arrtable[0] = "codigo"
+  arrtable[1] = "nome"
+  arrtable[2] = "telefone"
+  
+  With Mglobal
+    .rs1.MoveTo(Row)
+    tableview1.data.Text = Str(.rs1[arrtable[Column]])
+  End With
+
+End
+
+

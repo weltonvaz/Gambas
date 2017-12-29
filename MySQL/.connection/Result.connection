@@ -1,0 +1,13 @@
+# Gambas Connection File 3.0
+[Connection]
+Type="mysql"
+Host="172.17.0.2"
+Port="3306"
+User="monty"
+RememberPassword=True
+IgnoreCharset=False
+DisplayMetadata=False
+RememberTemplate=False
+Database="agenda"
+Requests=[""]
+

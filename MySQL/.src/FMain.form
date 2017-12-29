@@ -1,0 +1,44 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,125,75)
+  { Label1 Label
+    MoveScaled(4,6,13,5)
+    Text = ("Tipo de Banco:")
+  }
+  { Label2 Label
+    MoveScaled(20,6,16,5)
+    Text = ("Mysql")
+  }
+  { Label3 Label
+    MoveScaled(8,10,8,5)
+    Text = ("Servidor:")
+  }
+  { Label4 Label
+    MoveScaled(9,14,8,5)
+    Text = ("Usuário:")
+  }
+  { Label5 Label
+    MoveScaled(10,19,6,5)
+    Text = ("Senha:")
+  }
+  { Button1 Button
+    MoveScaled(44,9,21,4)
+    Text = ("Conectar")
+  }
+  { TableView1 TableView
+    MoveScaled(3,28,118,43)
+  }
+  { TextBox1 TextBox
+    MoveScaled(19,10,17,4)
+    Visible = False
+  }
+  { TextBox2 TextBox
+    MoveScaled(19,15,17,4)
+    Visible = False
+  }
+  { TextBox3 TextBox
+    MoveScaled(19,20,17,4)
+    Visible = False
+  }
+}

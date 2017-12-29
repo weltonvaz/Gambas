@@ -1,0 +1,34 @@
+' Gambas module file
+
+Public db As New Connection
+Public rs As Result
+Public rs1 As Result
+
+Public Function conn(host As String, lgn As String, pass As String) As Boolean
+  db.close
+  db.Type = "mysql"
+  
+  db.Host = "172.17.0.2"
+  db.Login = "monty"
+  db.Password = "some_pass"
+  db.Open
+  Return True
+
+Catch
+  Message.error(Error.text)
+  Return False
+End
+
+
+Public Sub fill_view(tbv As Tableview, qry As String)
+Dim i As Float
+  rs1 = db.exec(qry)
+  With rs1
+    tbv.rows.count = 0
+    If .count <> 0 Then
+      tbv.columns.count = .fields.count
+      tbv.rows.count = .count
+    End If
+  End With
+End
+

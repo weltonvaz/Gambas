@@ -1,0 +1,15 @@
+# Gambas Project File 3.0
+# Compiled with Gambas 3.9.1
+Title=Visualizador para Banco de Dados
+Startup=FMain
+Version=0.0.1
+Component=gb.image
+Component=gb.gui
+Component=gb.form
+Component=gb.db
+Component=gb.db.form
+Component=gb.db.mysql
+Authors="Welton Vaz de Souza"
+TabSize=2
+Language=en_US
+Packager=1
